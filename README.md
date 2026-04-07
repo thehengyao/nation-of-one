@@ -2,21 +2,33 @@
 
 ![Nation of One](assets/cover.jpg)
 
-> [中文版 README](README_CN.md)
+> [中文版](README_CN.md)
 
 ---
 
-Productivity tools treat you like a pipeline. Input tasks, output results, repeat.
+Most people who use productivity tools are doing execution work. Tasks, timers, streaks. It works — until it doesn't.
 
-But a person isn't a pipeline. A person is something you become.
+The quiet problem: execution tools assume you already know what you're executing toward. And they assume the person doing the executing is a stable, optimizable unit. Neither is true.
 
-The goal was never to do more. It was always to be more — more yourself, more coherent, more alive to what actually matters to you. No app built around tasks and deadlines can get you there.
+This shows up everywhere in vibe coding culture too. Someone gets excited about building. First project: a todo app. Second: a habit tracker. Third: a pomodoro timer. Not because those are the right things to build — but because that's the shape of the mental model they're running on. *Life as a queue of tasks to clear.*
 
-**Nation of One is built around a different premise: you are a country.**
+But a person isn't a queue. A person is something that unfolds. The goal was never to complete more — it was to become more yourself.
 
-Countries don't optimize. They govern — across defense and diplomacy, culture and economy, health and intelligence, all at once. A country's measure isn't how much it produces. It's whether it's becoming what it's capable of being.
+**Nation of One is built on that premise.**
 
-You're the head of state. Your AI is your Chief of Staff. Eight ministries. One life. Fully yours.
+You're not a pipeline to be optimized. You're a country to be governed — with a foreign ministry for your relationships, a defense ministry for your emotional resilience, an intelligence agency for what you're paying attention to. Eight ministries. One life. The whole thing at once.
+
+---
+
+## What it looks like in practice
+
+A designer with three products in progress. One is gaining traction, two are stalled. She's been logging daily for six weeks.
+
+Her NDRC (goals) keeps getting B ratings even though she feels busy. Her MOF (time and energy) reveals she's spending 60% of her hours on the stalled projects. Her MOD advisor — someone known for not letting you avoid what's uncomfortable — surfaces a pattern she hadn't named: she gravitates toward the projects where she's in control of the output, not the ones that require her to be visible.
+
+She didn't need another task manager. She needed to see the pattern.
+
+That's what Nation of One is for.
 
 ---
 
@@ -26,10 +38,10 @@ You're the head of state. Your AI is your Chief of Staff. Eight ministries. One 
 |------|----------|-----------------|
 | NDRC | 发改委 National Development & Reform | Goals, OKR, major decisions |
 | MOF | 财政部 Ministry of Finance | Money, time, energy allocation |
-| MOE | 教育部 Ministry of Education | Learning, skills, deep input |
+| MOE | 教育部 Ministry of Education | Learning, skills, depth of input |
 | NHC | 卫健委 National Health Commission | Sleep, exercise, diet, body signals |
 | MFA | 外交部 Ministry of Foreign Affairs | Relationships, networking, social energy |
-| MCT | 文旅部 Ministry of Culture & Tourism | Pure leisure — rest is rest, not productivity |
+| MCT | 文旅部 Ministry of Culture & Tourism | Rest, leisure — no justification required |
 | MOD | 国防部 Ministry of Defense | Emotional resilience, risk, boundaries |
 | NIA | 情报部 National Intelligence Agency | Industry intel + personal interest tracking |
 
@@ -37,27 +49,30 @@ You're the head of state. Your AI is your Chief of Staff. Eight ministries. One 
 
 ## Key Features
 
-**Standard Founding**
-Answer a few questions. Get your nation type, development stage, and baseline ratings. Start governing the same day.
+**Nation Founding**
+Answer a few questions. Get your nation type, development stage, and baseline ministry ratings. Start governing the same day.
 
 **Deep Founding**
-Feed it years of your journals, notes, and chat logs. The system reads them through 8 ministry lenses and produces a 6-dimension self-portrait — strengths, blind spots, core tensions, energy map, opportunity windows, risk tracks. Then it recommends which advisors to hire based on your actual patterns, not generic advice.
+Three ways in:
+- *You have years of rawdata* — journals, notes, chat logs. Feed them in. The system builds a persistent knowledge base organized through 8 ministry lenses (inspired by [Andrej Karpathy's LLM wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)), then produces a 6-dimension self-portrait: strengths, blind spots, core tensions, energy map, opportunity windows, risk tracks.
+- *You have some materials* — whatever you have. Partial is fine. The portrait will be partial too, and honest about it.
+- *You have nothing* — start with standard founding. Build from here.
 
 **Daily Check-in**
 Quick status across ministries. Only log what's abnormal. Normal = silence.
 
 **Proactive Briefing**
-Every session opens with an automatic scan. Overdue logs, ministry warnings, advisor updates — surfaced before you ask.
+Every session opens with an automatic scan — overdue logs, ministry warnings, advisor intel. Surfaced before you ask.
 
 **Cabinet Meetings**
-Weekly and monthly reviews with S/A/B/C/D ratings and trend arrows. One session to see your whole nation's health.
+Weekly and monthly reviews with S/A/B/C/D ratings and trend arrows.
 
 **Advisor Cabinet**
-Distill real people — thinkers, builders, historical figures — into advisor personas. Appoint them to ministries. Summon them anytime to weigh in on your decisions.
-[nuwa-skill](https://github.com/alchaincyf/nuwa-skill) by [@alchaincyf](https://github.com/alchaincyf) breathes them into existence. Nation of One puts them to work.
+Distill real people — thinkers, builders, historical figures — into advisor personas. Appoint them to ministries. Summon them when you need a perspective you can't reach alone.
+[nuwa-skill](https://github.com/alchaincyf/nuwa-skill) by [@alchaincyf](https://github.com/alchaincyf) · [X](https://x.com/alchainhust) breathes them into existence. Nation of One puts them to work.
 
 **Intelligence Briefings**
-Web search-powered updates on your professional domains and personal interests. Your NIA, actually doing its job.
+Web search-powered updates on your professional domains and personal interests. Your NIA, doing its actual job.
 
 ---
 
@@ -78,7 +93,7 @@ Web search-powered updates on your professional domains and personal interests. 
 | `"召见 [人名]"` | Summon an advisor to your current situation |
 | `"顾问团状态"` | List all advisors and appointments |
 
-Works in Chinese, English, or mixed — the system adapts.
+Works in Chinese, English, or mixed.
 
 ---
 
@@ -96,17 +111,17 @@ Requires [Claude Code](https://claude.ai/code).
 
 ## Data Storage
 
-Everything lives in `~/Documents/nation/` as plain Markdown. No cloud. No accounts. Yours.
+Everything in `~/Documents/nation/` as plain Markdown. No cloud. No accounts. Yours.
 
 ```
 ~/Documents/nation/
-├── founding.md        # Your nation's founding declaration
+├── founding.md        # Nation founding declaration
 ├── config.md          # Ministry config + advisor assignments
 ├── goals.md           # OKR (when you're ready)
 ├── logs/              # Daily check-ins
 ├── weekly/            # Cabinet meeting reports
 ├── monthly/           # Monthly macro reports
-├── wiki/              # Ministry wikis built from your rawdata
+├── wiki/              # Knowledge base built from your rawdata
 └── advisors/          # Distilled advisor personas
 ```
 
@@ -115,10 +130,10 @@ Everything lives in `~/Documents/nation/` as plain Markdown. No cloud. No accoun
 ## Design Principles
 
 1. **Diagnose before prescribe** — Know your nation before setting goals
-2. **Rest is rest** — MCT ≠ MOE. Leisure doesn't need justification
+2. **Rest is rest** — MCT ≠ MOE. Leisure doesn't need to earn its place
 3. **Data-minimal** — Only log what's abnormal. Normal = no entry
 4. **Sovereignty** — All suggestions are advisory. You decide
-5. **No blind spots** — The system reflects what's in your data, including what you might not want to see
+5. **No blind spots** — The system reflects what's actually in your data, including what you might not want to see
 
 ---
 
@@ -153,10 +168,6 @@ nation-of-one/
 
 ---
 
-## License
-
 MIT-0 — do whatever you want with it.
 
-## Contributing
-
-Issues and PRs welcome. If you've built a custom advisor configuration or extended the ministry system, open a PR.
+Issues and PRs welcome.
