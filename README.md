@@ -1,134 +1,162 @@
 # 🏛️ Nation of One
 
-**Run your life like a country.** A personal management skill for [OpenClaw](https://openclaw.ai) that frames your life as a nation with 8 ministries, each tracking a dimension of your wellbeing and growth.
+![Nation of One](assets/cover.jpg)
 
-## What It Does
+> [中文版 README](README_CN.md)
 
-Instead of yet another habit tracker or todo list, Nation of One gives you a **governance framework** — you're the head of state, your OpenClaw agent is your Chief of Staff, and your life is organized into 8 ministries:
+---
 
-| Ministry | Code | What It Manages |
-|----------|------|-----------------|
-| 发改委 National Development & Reform | NDRC | Goals, OKR, major decisions |
-| 财政部 Ministry of Finance | MOF | Money + time + energy allocation |
-| 教育部 Ministry of Education | MOE | Learning, skills, deep input |
-| 卫健委 National Health Commission | NHC | Sleep, exercise, diet, checkups |
-| 外交部 Ministry of Foreign Affairs | MFA | Relationships, networking, social |
-| 文旅部 Ministry of Culture & Tourism | MCT | Pure leisure — games, travel, rest |
-| 国防部 Ministry of Defense | MOD | Emotional resilience, risk, boundaries |
-| 情报部 National Intelligence Agency | NIA | Industry intel (Dept 1) + hobby intel (Dept 2) |
+Productivity tools treat you like a pipeline. Input tasks, output results, repeat.
+
+But a person isn't a pipeline. A person is something you become.
+
+The goal was never to do more. It was always to be more — more yourself, more coherent, more alive to what actually matters to you. No app built around tasks and deadlines can get you there.
+
+**Nation of One is built around a different premise: you are a country.**
+
+Countries don't optimize. They govern — across defense and diplomacy, culture and economy, health and intelligence, all at once. A country's measure isn't how much it produces. It's whether it's becoming what it's capable of being.
+
+You're the head of state. Your AI is your Chief of Staff. Eight ministries. One life. Fully yours.
+
+---
+
+## The 8 Ministries
+
+| Code | Ministry | What It Governs |
+|------|----------|-----------------|
+| NDRC | 发改委 National Development & Reform | Goals, OKR, major decisions |
+| MOF | 财政部 Ministry of Finance | Money, time, energy allocation |
+| MOE | 教育部 Ministry of Education | Learning, skills, deep input |
+| NHC | 卫健委 National Health Commission | Sleep, exercise, diet, body signals |
+| MFA | 外交部 Ministry of Foreign Affairs | Relationships, networking, social energy |
+| MCT | 文旅部 Ministry of Culture & Tourism | Pure leisure — rest is rest, not productivity |
+| MOD | 国防部 Ministry of Defense | Emotional resilience, risk, boundaries |
+| NIA | 情报部 National Intelligence Agency | Industry intel + personal interest tracking |
+
+---
 
 ## Key Features
 
-- **Nation Founding** — First-time onboarding that diagnoses your "nation type" (tech-driven, resource-based, creative, etc.) and development stage before setting any goals
-- **Daily Check-in** — Quick status report across ministries, only logging what's abnormal
-- **Cabinet Meetings** — Weekly/monthly reviews with S/A/B/C/D ratings and trend arrows
-- **Intelligence Briefings** — Web search-powered updates on your professional and hobby domains
-- **Strategic Planning** — OKR framework when you're ready (not forced on day one)
-- **Cross-ministry Analysis** — Detects when one department's decline affects another
+**Standard Founding**
+Answer a few questions. Get your nation type, development stage, and baseline ratings. Start governing the same day.
 
-## Token Efficiency
+**Deep Founding**
+Feed it years of your journals, notes, and chat logs. The system reads them through 8 ministry lenses and produces a 6-dimension self-portrait — strengths, blind spots, core tensions, energy map, opportunity windows, risk tracks. Then it recommends which advisors to hire based on your actual patterns, not generic advice.
 
-Designed to be lean on tokens:
+**Daily Check-in**
+Quick status across ministries. Only log what's abnormal. Normal = silence.
 
-- **SKILL.md**: ~70 lines, ~700 tokens when triggered
-- **Reference files**: Loaded on-demand only (check-in guide, report templates, grading standards)
-- **Daily logs**: YAML frontmatter + minimal text, skip normal departments
-- **Weekly summaries**: ≤150 words, replace daily details
-- **Monthly summaries**: ≤200 words, replace weekly details
+**Proactive Briefing**
+Every session opens with an automatic scan. Overdue logs, ministry warnings, advisor updates — surfaced before you ask.
 
-Your context window stays clean. Old data is summarized and archived, never accumulated.
+**Cabinet Meetings**
+Weekly and monthly reviews with S/A/B/C/D ratings and trend arrows. One session to see your whole nation's health.
 
-## Installation
+**Advisor Cabinet**
+Distill real people — thinkers, builders, historical figures — into advisor personas. Appoint them to ministries. Summon them anytime to weigh in on your decisions.
+[nuwa-skill](https://github.com/alchaincyf/nuwa-skill) by [@alchaincyf](https://github.com/alchaincyf) breathes them into existence. Nation of One puts them to work.
 
-### From ClawHub
-```bash
-clawhub install nation-of-one
-```
+**Intelligence Briefings**
+Web search-powered updates on your professional domains and personal interests. Your NIA, actually doing its job.
 
-### Manual
-```bash
-# Clone to your OpenClaw skills directory
-git clone https://github.com/hengyaoooo/nation-of-one.git ~/.openclaw/skills/nation-of-one
-```
+---
 
-### Workspace-level
-```bash
-git clone https://github.com/hengyaoooo/nation-of-one.git ./skills/nation-of-one
-```
-
-## Usage
-
-Just talk to your agent naturally:
+## How to Talk to It
 
 | You say | What happens |
 |---------|-------------|
-| "汇报" / "log today" | Daily check-in across ministries |
-| "开内阁会议" / "weekly review" | Cabinet meeting with ratings |
-| "月报" / "monthly report" | Monthly macro analysis |
-| "仪表盘" / "dashboard" | Visual dashboard (if canvas available) |
-| "情报简报" / "what's new in my field" | Web search-powered intel briefing |
-| "定目标" / "set OKR" | Strategic planning session |
-| "财政部怎么样" / "how's my health" | Single department deep dive |
+| `"建国"` / `"found my nation"` | Standard onboarding |
+| `"深度建国"` / `"deep founding"` | rawdata → self-portrait → advisor recommendations |
+| `"汇报"` / `"daily check-in"` | Ministry status report |
+| `"开内阁会议"` / `"cabinet meeting"` | Weekly review with ratings |
+| `"月报"` / `"monthly report"` | Monthly macro analysis |
+| `"情报简报"` / `"intel briefing"` | Web search update on your fields |
+| `"定目标"` / `"set OKR"` | Strategic planning |
+| `"财政部怎么样"` / `"how's MOF"` | Single ministry deep dive |
+| `"蒸馏 [人名]"` | Distill a person into an advisor persona |
+| `"任命 [人名] 为 [部委]"` | Appoint advisor to a ministry |
+| `"召见 [人名]"` | Summon an advisor to your current situation |
+| `"顾问团状态"` | List all advisors and appointments |
 
-Works in Chinese, English, or mixed — the agent adapts.
+Works in Chinese, English, or mixed — the system adapts.
+
+---
+
+## Installation
+
+```bash
+npx skills add hengyaoooo/nation-of-one
+```
+
+Requires [Claude Code](https://claude.ai/code).
+
+> OpenClaw support coming soon.
+
+---
+
+## Data Storage
+
+Everything lives in `~/Documents/nation/` as plain Markdown. No cloud. No accounts. Yours.
+
+```
+~/Documents/nation/
+├── founding.md        # Your nation's founding declaration
+├── config.md          # Ministry config + advisor assignments
+├── goals.md           # OKR (when you're ready)
+├── logs/              # Daily check-ins
+├── weekly/            # Cabinet meeting reports
+├── monthly/           # Monthly macro reports
+├── wiki/              # Ministry wikis built from your rawdata
+└── advisors/          # Distilled advisor personas
+```
+
+---
+
+## Design Principles
+
+1. **Diagnose before prescribe** — Know your nation before setting goals
+2. **Rest is rest** — MCT ≠ MOE. Leisure doesn't need justification
+3. **Data-minimal** — Only log what's abnormal. Normal = no entry
+4. **Sovereignty** — All suggestions are advisory. You decide
+5. **No blind spots** — The system reflects what's in your data, including what you might not want to see
+
+---
 
 ## File Structure
 
 ```
 nation-of-one/
-├── SKILL.md                      # Core instructions (loaded when triggered)
-├── VERSION                       # Semver
-├── README.md                     # You're reading it
+├── SKILL.md
+├── VERSION
+├── README.md
+├── README_CN.md
+├── assets/
+│   └── cover.jpg
+├── examples/
+│   └── advisor-cabinet-example.md
 └── references/
-    ├── onboarding.md             # Nation founding flow (first use only)
-    ├── checkin.md                # Daily check-in guide
-    ├── report-format.md          # Weekly/monthly report templates
-    └── grading.md                # S-D rating standards per ministry
+    ├── onboarding.md
+    ├── deep-onboarding.md
+    ├── ministry-audit.md
+    ├── advisors.md
+    ├── checkin.md
+    ├── report-format.md
+    └── grading.md
 ```
 
-## Data Storage
+---
 
-All data lives in `~/Documents/nation/` as plain Markdown:
+## Credits
 
-```
-~/Documents/nation/
-├── founding.md                   # Nation founding declaration
-├── config.md                     # Intel department config (your interests)
-├── goals.md                      # Current OKR (when you're ready)
-├── logs/                         # Daily status reports
-│   ├── 2026-03-16.md
-│   └── archive/                  # Archived old logs
-├── weekly/                       # Weekly State of the Union
-└── monthly/                      # Monthly macro reports
-```
+- Advisor distillation — [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) by [@alchaincyf](https://github.com/alchaincyf) · [X](https://x.com/alchainhust)
+- Knowledge base architecture — [Andrej Karpathy's LLM wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 
-## Design Philosophy
-
-1. **Diagnose before prescribe** — Understand your nation before setting goals
-2. **Rest is rest** — Ministry of Culture ≠ Ministry of Education. Fun doesn't need to be "productive"
-3. **Data-minimal** — Only log what's abnormal. Normal = no entry needed
-4. **Sovereignty** — All suggestions are advisory. The head of state decides
-
-## Requirements
-
-- OpenClaw with any LLM (Claude recommended for best bilingual support)
-- Web search tool (for Intelligence Briefings)
-- No API keys or external services needed
-
-## Security
-
-```
-# SECURITY MANIFEST:
-# Environment variables accessed: none
-# External endpoints called: none (web search via OpenClaw built-in)
-# Local files read: ~/Documents/nation/**
-# Local files written: ~/Documents/nation/**
-```
+---
 
 ## License
 
-MIT-0 (ClawHub default)
+MIT-0 — do whatever you want with it.
 
 ## Contributing
 
-Issues and PRs welcome. If you've extended the ministry system or added new report formats, I'd love to see them.
+Issues and PRs welcome. If you've built a custom advisor configuration or extended the ministry system, open a PR.
